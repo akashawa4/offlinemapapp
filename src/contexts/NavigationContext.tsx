@@ -90,7 +90,7 @@ export function NavigationProvider({ children }: { children: ReactNode }) {
           osrmProfile = 'car'; // OSRM doesn't have public transport, default to car
           break;
       }
-      const url = `http://router.project-osrm.org/route/v1/${osrmProfile}/${waypoints}?overview=full&geometries=geojson&steps=true`;
+      const url = `https://router.project-osrm.org/route/v1/${osrmProfile}/${waypoints}?overview=full&geometries=geojson&steps=true`;
 
       const response = await fetch(url);
       const data = await response.json();
